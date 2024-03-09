@@ -40,8 +40,8 @@ def get_numbers_ticket2(min, max, quantity):
     return sorted(list(numbers_set))
 
 
-lottery_numbers = get_numbers_ticket(1, 100, 7)
+lottery_numbers = get_numbers_ticket(1, 101, 7)
 print("Ваші лотерейні числа:", lottery_numbers)
 
-lottery_numbers = get_numbers_ticket2(1, 100, 7)
+lottery_numbers = get_numbers_ticket2(1, 101, 7)
 print("Ваші лотерейні числа (функція №2):", lottery_numbers)
