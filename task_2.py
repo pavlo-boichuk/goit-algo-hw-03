@@ -1,8 +1,13 @@
 import random
 
-# Функція генерує вказану кількість унікальних чисел у заданому діапазоні
-# Функція повертає список випадково вибраних, відсортованих чисел
 def get_numbers_ticket(min, max, quantity):
+    '''
+    Функція генерує вказану кількість унікальних чисел у заданому діапазоні
+    :param min: int — мінімальне можливе число у наборі (не менше 1)
+    :param max: int — максимальне можливе число у наборі (не більше 1000)
+    :param quantity: int — кількість чисел, які потрібно вибрати (значення між min і max)
+    :return: list - повертає список випадково вибраних, відсортованих чисел
+    '''
 
     # контроль відповідності вхідних параметрів заданим обмеженням
     if not (1 <= min <= max <= 1000):
@@ -40,8 +45,8 @@ def get_numbers_ticket2(min, max, quantity):
     return sorted(list(numbers_set))
 
 
-lottery_numbers = get_numbers_ticket(1, 101, 7)
+lottery_numbers = get_numbers_ticket(1, 100, 7)
 print("Ваші лотерейні числа:", lottery_numbers)
 
-lottery_numbers = get_numbers_ticket2(1, 101, 7)
+lottery_numbers = get_numbers_ticket2(1, 100, 7)
 print("Ваші лотерейні числа (функція №2):", lottery_numbers)
